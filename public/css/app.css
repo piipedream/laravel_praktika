@@ -1,0 +1,39 @@
+html{
+  height: 100%;
+}
+
+body{
+  background: #f8f9fa;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.home_img_bg{
+  background: url(/img/home_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.home_img_bg h1{
+  color: #fff;
+}
+
+.home_img_bg p{
+  color: #fff;
+}
+
+.parent_form{
+  margin-top: 5%;
+  width: 705px;
+}
+
+.one_request{
+  width: 800px;
+  margin-top: 50px;
+}
+
+footer{
+  background: #fff;
+}
