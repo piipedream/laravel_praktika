@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="parent_form container">
-<form action="#" method="post">
+<form action="{{ route('user.login') }}" method="post">
     @csrf
 
     <div class="form-group mt-3">

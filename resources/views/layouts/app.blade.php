@@ -11,6 +11,9 @@
   <body>
     @include('inc.header')
     <div class="main_content">
+      <div class="container">
+        @include('inc.messages')
+      </div>
       @yield('content')
     </div>
     @include('inc.footer')

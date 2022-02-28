@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title-block')Requests @endsection
+@section('title-block')User page @endsection
 
 @section('content')
 @foreach($data as $el)

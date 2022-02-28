@@ -17,7 +17,7 @@
 
     <div class="form-group mt-3">
         <label for="name" class="mb-2">Login</label>
-        <input type="text" name="name" placeholder="Login" id="name" class="form-control" pattern="[a-zA-Z]*">
+        <input type="text" name="login" placeholder="Login" id="login" class="form-control" pattern="[a-zA-Z]*">
         @error('name')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror

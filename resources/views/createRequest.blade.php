@@ -3,15 +3,19 @@
 @section('title-block')Создать заявку@endsection
 
 @section('content')
+
 <div class="parent_form container">
-<form action="#" method="post" enctype="multipart/form-data" class="text-left createRequest">
+<form action="{{ Route('request_form') }}" method="post" enctype="multipart/form-data" class="text-left createRequest">
   @csrf
 
-  <input name="user_id" id="user_id" style="display: none" value="">
+  <div class="form-group">
+    <label for="name" class="mb-2">Введите login</label>
+    <input type="text" name="login" placeholder="Введите login" id="login" class="form-control" >
+  </div>
 
   <div class="form-group">
     <label for="name" class="mb-2">Адрес</label>
-    <input type="text" name="name" placeholder="Введите имя" id="name" class="form-control" value="">
+    <input type="text" name="address" placeholder="Введите адрес" id="address" class="form-control">
   </div>
 
   <div class="mt-3 form-group">
@@ -21,12 +25,12 @@
 
   <div class="mt-3 form-group">
     <label for="subject" class="mb-2">Максимальная цена</label>
-    <input type="text" name="subject" placeholder="Тема сообщения" id="subject" class="form-control">
+    <input type="text" name="price" placeholder="Введите цену" id="price" class="form-control">
   </div>
 
   <div class="form-group mt-3">
-    <label for="beforeImage">Image</label>
-    <input type="file" class="form-control-file" id="beforeImage" name="beforeImage">
+    <label for="Image">Image</label>
+    <input type="file" class="form-control-file" id="Image" name="Image">
   </div>
 
   <button type="submit" class="btn mt-3 btn-primary">Добавить</button>

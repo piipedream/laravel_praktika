@@ -8,19 +8,21 @@
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
         <a class="me-3 py-2 text-white text-decoration-none" href="{{route('home')}}">home</a>
         <a class="me-3 py-2 text-white text-decoration-none" href="{{route('createRequest')}}">создать заявку</a>
-        <a class="me-3 py-2 text-white text-decoration-none" href="{{route('requests')}}">заявки</a>
+        @can('admin')
+          <a class="me-3 py-2 text-white text-decoration-none" href="{{route('request_data')}}">заявки</a>
+        @endcan
       </nav>
 
       @if (Auth::check())
       <div class="">
-          <span>{{ Auth::user()->name }}</span>
-          <a href=""  class="btn btn-outline-primary me-2">User page</a>
-          <a href="" class="btn btn-outline-primary me-2">Logout</a>
+          <span style="color: white;">{{ Auth::user()->login }}</span>
+          <a href="{{ route('user.private') }}"  class="btn btn-outline-light me-2">User page</a>
+          <a href="{{ route('user.logout') }}" class="btn btn-outline-light me-2">Logout</a>
       </div>
       @else
       <div class="">
-          <a href="{{ route('login') }}" class="btn btn-outline-light me-2">Login</a>
-          <a href="{{ route('registration') }}"  class="btn btn-outline-light me-2">Registration</a>
+          <a href="{{ route('user.login') }}" class="btn btn-outline-light me-2">Login</a>
+          <a href="{{ route('user.registration') }}"  class="btn btn-outline-light me-2">Registration</a>
       </div>
       @endif
 
