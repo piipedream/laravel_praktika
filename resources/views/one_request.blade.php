@@ -16,10 +16,14 @@
     <img style="max-width: 100%" src="{{asset("storage/image/$data->image")}}" alt="image">
   @endif
   <br>
-  <a href="{{route('request_delete', $data->id)}}"><button class="btn mt-3 btn-danger show_confirm">Удалить</button></a>
+  @can('admin')
+  <a href="{{route('request_delete', $data->id)}}">
+    <button class="btn mt-3 btn-danger show_confirm">Удалить</button>
+  </a>
+  @endcan
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
 <script type="text/javascript">
 
     $('.show_confirm').click(function(event) {
@@ -40,6 +44,6 @@
           });
       });
 
-</script>
+</script> -->
 
 @endsection

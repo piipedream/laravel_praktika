@@ -13,7 +13,7 @@
     <input type="text" name="login" placeholder="Введите login" id="login" class="form-control" >
   </div>
 
-  <div class="form-group">
+  <div class="mt-3 form-group">
     <label for="name" class="mb-2">Адрес</label>
     <input type="text" name="address" placeholder="Введите адрес" id="address" class="form-control">
   </div>

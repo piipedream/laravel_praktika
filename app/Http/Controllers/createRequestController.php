@@ -48,6 +48,8 @@ class createRequestController extends Controller
     }
 
     public function deleteMessage($id){
+      $this->authorize('admin');
+      $createRequest = new createRequest;
       createRequest::find($id)->delete();
       return redirect()->route('request_data')->with('success', 'Сообщение было удалено');
     }
